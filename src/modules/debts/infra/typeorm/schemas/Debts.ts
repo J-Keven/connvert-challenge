@@ -10,7 +10,7 @@ import {
 @Entity('debts')
 class Debts {
   @ObjectIdColumn()
-  id: ObjectID;
+  id: ObjectID | string;
 
   @Column()
   user_id: number;

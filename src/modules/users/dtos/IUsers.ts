@@ -6,7 +6,7 @@ interface IAddressProps {
 }
 
 export default interface IUserProps {
-  id: string;
+  id: number;
   name: string;
   username: string;
   email: string;

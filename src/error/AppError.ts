@@ -3,7 +3,7 @@ class AppError {
 
   public readonly message: string;
 
-  constructor(message: string, status: 400) {
+  constructor(message: string, status = 400) {
     this.message = message;
 
     this.status = status;

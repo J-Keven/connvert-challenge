@@ -10,6 +10,20 @@ class DebtsRepository implements IDebtsRepository {
     this.ormRepository = getMongoRepository(Debts);
   }
 
+  public async findById(id: string): Promise<Debts | undefined> {
+    const debt = await this.ormRepository.findOne(id);
+
+    return debt;
+  }
+
+  public async findAllFromUser(user_id: number): Promise<Debts[]> {
+    const debtsFromUser = this.ormRepository.find({
+      user_id,
+    });
+
+    return debtsFromUser;
+  }
+
   public async create({ value, user_id, description }: IDebt): Promise<Debts> {
     const debt = this.ormRepository.create({
       description,
@@ -20,6 +34,10 @@ class DebtsRepository implements IDebtsRepository {
     await this.ormRepository.save(debt);
 
     return debt;
+  }
+
+  public async delete(debt: Debts): Promise<void> {
+    await this.ormRepository.delete(debt.id);
   }
 }
 

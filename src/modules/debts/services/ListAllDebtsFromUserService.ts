@@ -1,13 +1,12 @@
-import { injectable, inject } from 'tsyringe';
-import AppError from '../../../error/AppError';
-import IDebt from '../dtos/IDebt';
+import { inject, injectable } from 'tsyringe';
 import Debts from '../infra/typeorm/schemas/Debts';
+import AppError from '../../../error/AppError';
 import IDebtsRepository from '../repositories/IDebtsRepository';
 import IJsonPlaceholder from '../../users/infra/services/model/IJsonPlaceholder';
 
 @injectable()
-class CreateDebitService {
-  private debitRepository: IDebtsRepository;
+class ListAllDebtsFromUserService {
+  private debtsRepository: IDebtsRepository;
 
   private jsonPlaceholder: IJsonPlaceholder;
 
@@ -17,24 +16,21 @@ class CreateDebitService {
     @inject('JsonPlaceholder')
     jsonPlaceholder: IJsonPlaceholder,
   ) {
-    this.debitRepository = debitRepository;
+    this.debtsRepository = debitRepository;
     this.jsonPlaceholder = jsonPlaceholder;
   }
 
-  public async execute({ description, user_id, value }: IDebt): Promise<Debts> {
+  public async execute(user_id: number): Promise<Debts[]> {
     const user = await this.jsonPlaceholder.findUserById(user_id);
 
     if (!user) {
       throw new AppError('this user not exeist');
     }
 
-    const debit = await this.debitRepository.create({
-      description,
-      user_id,
-      value,
-    });
-    return debit;
+    const debts = this.debtsRepository.findAllFromUser(user_id);
+
+    return debts;
   }
 }
 
-export default CreateDebitService;
+export default ListAllDebtsFromUserService;
