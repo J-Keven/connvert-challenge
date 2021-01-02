@@ -1,5 +1,5 @@
 import { inject, injectable } from 'tsyringe';
-import AppError from '../../../error/AppError';
+import AppError from '../../../shared/error/AppError';
 import Debts from '../infra/typeorm/schemas/Debts';
 import IDebtsRepository from '../repositories/IDebtsRepository';
 
@@ -31,11 +31,15 @@ class UpdateDebtService {
       throw new AppError('Debt not found, see debts list from user', 400);
     }
 
-    Object.assign(debt, {
-      value,
-      description,
-    });
+    if (value) {
+      debt.value = value;
+    }
 
+    if (description) {
+      debt.description = description;
+    }
+
+    console.log(debt);
     await this.debtsRepository.save(debt);
     return debt;
   }

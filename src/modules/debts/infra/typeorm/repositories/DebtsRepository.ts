@@ -12,7 +12,6 @@ class DebtsRepository implements IDebtsRepository {
 
   public async findById(id: string): Promise<Debts | undefined> {
     const debt = await this.ormRepository.findOne(id);
-
     return debt;
   }
 
@@ -36,8 +35,14 @@ class DebtsRepository implements IDebtsRepository {
     return debt;
   }
 
+  public async save(debt: Debts): Promise<Debts> {
+    await this.ormRepository.save(debt);
+
+    return debt;
+  }
+
   public async delete(debt: Debts): Promise<void> {
-    await this.ormRepository.delete(debt.id);
+    await this.ormRepository.delete(debt);
   }
 }
 

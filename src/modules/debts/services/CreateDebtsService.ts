@@ -1,5 +1,5 @@
 import { injectable, inject } from 'tsyringe';
-import AppError from '../../../error/AppError';
+import AppError from '../../../shared/error/AppError';
 import IDebt from '../dtos/IDebt';
 import Debts from '../infra/typeorm/schemas/Debts';
 import IDebtsRepository from '../repositories/IDebtsRepository';
@@ -25,7 +25,7 @@ class CreateDebitService {
     const user = await this.jsonPlaceholder.findUserById(user_id);
 
     if (!user) {
-      throw new AppError('this user not exeist');
+      throw new AppError('this user not exist');
     }
 
     const debit = await this.debitRepository.create({

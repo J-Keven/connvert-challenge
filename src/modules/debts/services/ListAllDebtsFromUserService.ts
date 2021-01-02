@@ -1,6 +1,6 @@
 import { inject, injectable } from 'tsyringe';
 import Debts from '../infra/typeorm/schemas/Debts';
-import AppError from '../../../error/AppError';
+import AppError from '../../../shared/error/AppError';
 import IDebtsRepository from '../repositories/IDebtsRepository';
 import IJsonPlaceholder from '../../users/infra/services/model/IJsonPlaceholder';
 
