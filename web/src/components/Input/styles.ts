@@ -6,16 +6,20 @@ interface InputProps {
 
 export const Container = styled.div<InputProps>`
   width: 100%;
+  height: 60px;
+  margin: 10px 0;
 
   input {
     width: 100%;
-    max-width: 500px;
+    height: 100%;
+    padding: 8px;
+    max-width: 600px;
     border: 1px solid #fff;
     background-color: #e5e5e5;
-    height: 40px;
     border-radius: 8px;
-    padding: 8px;
-    margin: 10px 0;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #232129;
   }
 
   ${props =>

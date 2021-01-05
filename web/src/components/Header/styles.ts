@@ -1,3 +1,4 @@
+import { shade } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -12,7 +13,12 @@ export const Container = styled.div`
   a {
     text-decoration: none;
     color: #fff;
-    width: 60px;
+    width: 100px;
+    font-weight: 700;
+    font-size: 18px;
+    &:hover {
+      color: ${shade(0.3, '#fff')};
+    }
   }
 
   @media (min-width: 750px) {

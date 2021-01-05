@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  background-color: #fff;
+  background-color: #f0f2f5;
   width: 100%;
   padding: 40px;
   border-radius: 10px;

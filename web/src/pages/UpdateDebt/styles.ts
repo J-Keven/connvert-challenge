@@ -35,22 +35,6 @@ export const Content = styled.div`
       margin-bottom: 30px;
     }
 
-    select {
-      width: 100%;
-      height: 60px;
-      margin: 10px 0;
-
-      max-width: 600px;
-      background-color: #e5e5e5;
-
-      border: 0;
-      border-radius: 8px;
-      padding: 8px;
-      font-weight: 400;
-      font-size: 1rem;
-      color: #232129;
-    }
-
     div#submitFormButton {
       margin: 0 auto;
       margin-top: 30px;
@@ -77,12 +61,10 @@ export const Content = styled.div`
       button {
         display: flex;
         align-items: center;
-        /* border-radius: 8px; */
-        /* height: 50px;
-        width: 250px; */
         border: 0;
         background-color: transparent;
         transition: background 0.2s;
+
         svg,
         text {
           color: #6a6180;
@@ -100,7 +82,7 @@ export const Content = styled.div`
   }
 
   > img {
-    max-width: 600px;
+    width: 800px;
     overflow: hidden;
   }
 

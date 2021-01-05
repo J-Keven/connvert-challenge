@@ -1,15 +1,22 @@
 import React from 'react';
 import { FiTrash2, FiEdit } from 'react-icons/fi';
+import { useHistory } from 'react-router-dom';
 import { Container, Content, ActionsButtons } from './styles';
 
 const DebtCard: React.FC = () => {
+  const history = useHistory();
+
   return (
     <Container>
       <Content>
         <header>
           <strong>R$ 10.000,00</strong>
           <ActionsButtons>
-            <button type="button" id="edit">
+            <button
+              type="button"
+              id="edit"
+              onClick={() => history.push('updateDebt')}
+            >
               <FiEdit size={32} />
             </button>
             <button type="button" id="trash">

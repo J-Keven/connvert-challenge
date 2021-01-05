@@ -3,8 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
   padding: 0;
   width: 100%;
-
-  /* max-width: 400px; */
 `;
 
 export const Content = styled.div`
@@ -14,7 +12,7 @@ export const Content = styled.div`
   > strong {
     font-size: 1.4rem;
     line-height: 21px;
-    color: #969cb3;
+    color: #232129;
   }
 
   ul {
@@ -47,9 +45,8 @@ export const TopBar = styled.div`
     margin-left: 20%;
   }
   display: flex;
-  /* justify-content: space-between; */
 
   @media (max-width: 750px) {
-    opacity: 0;
+    display: none;
   }
 `;

@@ -4,8 +4,26 @@ import styled from 'styled-components';
 export const Container = styled.div`
   padding: 0;
   width: 100%;
+  body {
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    img {
+      /* flex: 1; */
+      /* width: 100%; */
+      width: 800px;
+      height: 700px;
+      overflow: hidden;
+    }
+  }
 
-  /* max-width: 400px; */
+  @media (max-width: 800px) {
+    body {
+      img {
+        display: none;
+      }
+    }
+  }
 `;
 
 export const Content = styled.div`

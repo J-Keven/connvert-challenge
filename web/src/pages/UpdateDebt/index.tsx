@@ -4,22 +4,18 @@ import { FiArrowLeft } from 'react-icons/fi';
 import Header from '../../components/Header';
 import Input from '../../components/Input';
 import TextArea from '../../components/TextArea';
-import background from '../../assets/background.png';
+
+import background from '../../assets/updateDebts2.png';
 import { Container, Content } from './styles';
 
-const CreateDebt: React.FC = () => {
+const UpdateDebt: React.FC = () => {
   const history = useHistory();
   return (
     <Container>
       <Header />
       <Content>
         <form>
-          <strong>Adicionar nova divida</strong>
-          <label htmlFor="user">
-            <select name="user" id="user" required>
-              <option value="0">Selecione um Usuário</option>
-            </select>
-          </label>
+          <strong>Atulizar dados da dívida</strong>
 
           <Input type="text" name="value" placeholder="Valor da dívida" />
 
@@ -42,4 +38,4 @@ const CreateDebt: React.FC = () => {
   );
 };
 
-export default CreateDebt;
+export default UpdateDebt;

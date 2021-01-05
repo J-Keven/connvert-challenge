@@ -15,7 +15,7 @@ const Header: React.FC = () => {
         </LogoImage>
       </header>
 
-      <Link to="createDebt">
+      <Link to="/createDebt">
         <text>Adicionar dívida</text>
       </Link>
     </Container>

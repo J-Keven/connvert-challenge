@@ -6,16 +6,21 @@ interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
   width: 100%;
+  height: 150px;
+  margin-bottom: 30px;
 
   textarea {
     width: 100%;
-    max-width: 500px;
+    height: 100%;
+    max-width: 600px;
     border: 1px solid #fff;
     align-content: center;
-    /* height: 40px; */
     border-radius: 8px;
-    padding: 8px;
-    margin: 10px 0;
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #232129;
     background-color: #e5e5e5;
   }
 
