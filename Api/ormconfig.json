@@ -1,8 +1,6 @@
 {
   "type": "mongodb",
-  "host": "localhost",
-  "port": 27017,
-  "database": "challenge",
+  "url": "mongodb+srv://keven:jhonas4313@cluster0.vvpyt.mongodb.net/<testenao>?retryWrites=true&w=majority",
   "useUnifiedTopology": true, 
   "entities": [ "./src/modules/**/infra/typeorm/schemas/*.ts" ]
 }
