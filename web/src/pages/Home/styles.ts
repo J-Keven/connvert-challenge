@@ -37,14 +37,8 @@ export const TopBar = styled.div`
   font-size: 16px;
   line-height: 24px;
   color: #969cb3;
-
-  > text {
-    margin-left: 8%;
-  }
-  text + text {
-    margin-left: 20%;
-  }
   display: flex;
+  justify-content: space-around;
 
   @media (max-width: 750px) {
     display: none;

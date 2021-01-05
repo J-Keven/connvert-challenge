@@ -4,10 +4,10 @@ import ListAllDebtsFromUserService from '../../../services/ListAllDebtsFromUserS
 
 class ListAllDebitsFromUserController {
   public async index(req: Request, res: Response): Promise<Response> {
-    const { user_id } = req.body;
+    const { id } = req.params;
     const listAllDebtsFromUser = container.resolve(ListAllDebtsFromUserService);
 
-    const debts = await listAllDebtsFromUser.execute(user_id);
+    const debts = await listAllDebtsFromUser.execute(Number(id));
 
     return res.status(200).json(debts);
   }

@@ -2,19 +2,31 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 import { Container, UserInfo } from './styles';
+import formatValue from '../../utils/formatValue';
 
-const UserCard: React.FC = () => {
+interface UserCardProps {
+  id: number;
+  name: string;
+  debt_total: number;
+  count_debit: number;
+}
+const UserCard: React.FC<UserCardProps> = ({
+  id,
+  name,
+  debt_total,
+  count_debit,
+}) => {
   const history = useHistory();
   return (
     <Container
       onClick={() => {
-        history.push('debtsList');
+        history.push(`debtsList/${id}`);
       }}
     >
       <UserInfo>
-        <strong>Ricardo</strong>
-        <text>R$ 10.000,00</text>
-        <span>Um total de 12 dívidas</span>
+        <strong>{name}</strong>
+        <text>{formatValue(debt_total)}</text>
+        <span>{`${count_debit} Dívidas`}</span>
       </UserInfo>
       <FiArrowRight size={32} />
     </Container>

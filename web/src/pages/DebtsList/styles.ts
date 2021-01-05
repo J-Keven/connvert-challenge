@@ -5,12 +5,9 @@ export const Container = styled.div`
   padding: 0;
   width: 100%;
   body {
-    padding: 0 50px;
     display: flex;
     justify-content: center;
     img {
-      /* flex: 1; */
-      /* width: 100%; */
       width: 800px;
       height: 700px;
       overflow: hidden;
@@ -27,9 +24,9 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 50px;
+  padding: 10px;
   flex-direction: column;
-
+  margin-top: 30px;
   > div {
     display: flex;
     align-items: center;
@@ -39,6 +36,7 @@ export const Content = styled.div`
       margin-bottom: 20px;
       color: #5636d3;
     }
+
     a {
       text-decoration: none;
       margin-right: 22%;
@@ -47,6 +45,10 @@ export const Content = styled.div`
       &:hover {
         color: ${shade(0.3, '#5636D3')};
       }
+    }
+    @media (min-width: 750px) {
+      max-width: 500px;
+      width: 100%;
     }
   }
 
@@ -67,6 +69,7 @@ export const Content = styled.div`
 `;
 
 export const TopBar = styled.div`
+  display: flex;
   width: 100%;
   max-width: 900px;
   margin-top: 20px;
@@ -80,8 +83,6 @@ export const TopBar = styled.div`
   text + text {
     margin-left: 20%;
   }
-  display: flex;
-  /* justify-content: space-between; */
 
   @media (max-width: 750px) {
     opacity: 0;

@@ -9,18 +9,20 @@ const debtsController = new DebtsController();
 const updateDebitController = new UpdateDebitController();
 const listAllDebitsFromUserController = new ListAllDebitsFromUserController();
 
-debtsRoutes.get('/', listAllDebitsFromUserController.index);
+debtsRoutes.get('/:id', listAllDebitsFromUserController.index);
+
 debtsRoutes.post(
   '/',
   celebrate({
     [Segments.BODY]: {
       description: Joi.string().required(),
       value: Joi.number().required(),
-      user_id: Joi.string().required(),
+      user_id: Joi.number().required(),
     },
   }),
   debtsController.create,
 );
+
 debtsRoutes.patch(
   '/:debt_id',
   celebrate({
@@ -34,6 +36,7 @@ debtsRoutes.patch(
   }),
   updateDebitController.index,
 );
+
 debtsRoutes.delete(
   '/:debt_id',
   celebrate({

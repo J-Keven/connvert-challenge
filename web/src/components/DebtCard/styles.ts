@@ -3,8 +3,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 500px;
+  width: 500px;
   min-width: 250px;
+  @media (max-width: 600px) {
+    width: 300px;
+  }
 `;
 
 export const Content = styled.div`
@@ -69,6 +72,17 @@ export const ActionsButtons = styled.div`
     &:hover {
       svg {
         color: ${shade(0.3, '#e83f5b')};
+      }
+    }
+  }
+  @media (max-width: 750px) {
+    display: flex;
+    button {
+      svg {
+        width: 22px;
+        & + svg {
+          margin-left: 10px;
+        }
       }
     }
   }

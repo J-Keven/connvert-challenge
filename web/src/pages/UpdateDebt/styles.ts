@@ -35,23 +35,21 @@ export const Content = styled.div`
       margin-bottom: 30px;
     }
 
-    div#submitFormButton {
+    > button {
       margin: 0 auto;
       margin-top: 30px;
-      button {
-        border-radius: 8px;
-        height: 50px;
-        width: 250px;
-        font-weight: 700;
-        font-size: 17px;
+      border-radius: 8px;
+      height: 50px;
+      width: 250px;
+      font-weight: 700;
+      font-size: 17px;
 
-        color: #fff;
-        border: 0;
-        background-color: #e02041;
-        transition: background 0.2s;
-        &:hover {
-          background-color: ${shade(0.2, '#e02041')};
-        }
+      color: #fff;
+      border: 0;
+      background-color: #e02041;
+      transition: background 0.2s;
+      &:hover {
+        background-color: ${shade(0.2, '#e02041')};
       }
     }
 
@@ -91,12 +89,10 @@ export const Content = styled.div`
 
     form {
       margin: 0 auto;
-      div#submitFormButton {
+      > button {
+        width: 100%;
         margin-top: 20px;
         width: 100%;
-        button {
-          width: 100%;
-        }
       }
     }
 
