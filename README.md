@@ -20,10 +20,10 @@
 
 
 <p align="center">
-  <a href="https://github.com/J-Keven/connvert-challenge/#sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/J-Keven/connvert-challenge/#-como-usar">Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/J-Keven/connvert-challenge/#-como-usar">Como Usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/J-Keven/connvert-challenge/#-rotas">Rotas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/J-Keven/connvert-challenge/#fire-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/J-Keven/connvert-challenge/#techs">Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/J-Keven/connvert-challenge/#-executando-o-projeto">Como Usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/J-Keven/connvert-challenge/blob/main/Api/Readme.md#rotas">Rotas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/J-Keven/connvert-challenge/#-como-contribuir">Como Contribuir</a>&nbsp;&nbsp;&nbsp;
   <!-- <a href="#memo-licença">Licença</a> -->
 </p>

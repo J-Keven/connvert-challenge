@@ -18,12 +18,11 @@
   </a>
 </p>
 
-
 <p align="center">
-  <a href="https://github.com/J-Keven/connvert-challenge/#sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/J-Keven/connvert-challenge/#-como-usar">Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/J-Keven/connvert-challenge/#-como-usar">Como Usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/J-Keven/connvert-challenge/#-rotas">Rotas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/J-Keven/connvert-challenge/#fire-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/J-Keven/connvert-challenge/#techs">Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/J-Keven/connvert-challenge/#-executando-o-projeto">Como Usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/J-Keven/connvert-challenge/blob/main/Api/Readme.md#rotas">Rotas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/J-Keven/connvert-challenge/#-como-contribuir">Como Contribuir</a>&nbsp;&nbsp;&nbsp;
   <!-- <a href="#memo-licença">Licença</a> -->
 </p>
@@ -104,39 +103,64 @@ A aplicação possue rotas para cadastrar, atualiza, listar e deletar dividas e 
 - GET  /user 
   Busca tosdos os usuários existentes no Jsonplaceholder e os devolve como resposta.
 
-- GET /user/id 
-  Exibe as infomações de um unico usuário.
+  Ex de url:
   
-  Recebe um parametro obrigatório com o valor do id do usuário. Ex: 
-  
-  ```js
-  "http://localhost:3333/debts/1"
-  ```
-
-- GET /debts/id 
-  Lista todos os dividas do usuáio, caso ele n teha divida a resposta será um array vazio.
-  
-  Recebe um parametro obrigatório com o valor do id do usuário. Ex: 
 
   ```js
-  "http://localhost:3333/debts/1"
+  "http://localhost:3333/user"
   ```
 
 - GET  /users-in-debt
 
   Lista somente os usuário que possuem pelo menos uma divida.
 
+  Ex de url:
+  
+  ```js
+  "http://localhost:3333/users-in-debt"
+  ```
+  
+- GET /user
+  Exibe as infomações de um unico usuário.
+  
+  Recebe um parametro obrigatório com o valor do id do usuário.
+
+  Parâmetro| type |Descrição
+  ----     |--| -------
+  id    | number | Id do usuário que deseja listar os dados.
+  
+  Ex de url:
+
+  ```js
+  "http://localhost:3333/debts/1"
+  ```
+
+- GET /debts
+  Lista todos os dividas do usuáio, caso ele n teha divida a resposta será um array vazio.
+  
+  Recebe um parametro obrigatório com o valor do id do usuário.
+
+  Parâmetro| type |Descrição
+  ----     |--| -------
+  id    | number |Id do usuário que deseja listar dividas. 
+
+  Ex de url:
+
+  ```js
+  "http://localhost:3333/debts/1"
+  ```
+  
 
 - POST  /debts 
   Cadastra uma nova divida para um usuário e devolve como resposta a divida cadastrada.
   
   Recebe no corpo da requisição os seguintes parametro obrigatórios:
 
-  Parâmetro| Descrição
-  ----     |---------
-  user_id  | Deve conter o id do usuário que cotraiu a divida.
-  value    | Deve conter um valor decimal que representa o valor da divida.
-  description| uma descrição da divida
+  Parâmetro|  type  |Descrição
+  ----     |----|-----
+  user_id  | number |Deve conter o id do usuário que cotraiu a divida.
+  value    | number | Deve conter um valor decimal que representa o valor da divida.
+  description| string |uma descrição da divida
 
 - PATCH  /debts 
 
@@ -144,10 +168,10 @@ A aplicação possue rotas para cadastrar, atualiza, listar e deletar dividas e 
   
   Recebe no corpo da requisição os seguintes parametro não obrigatórios ( Só será atualizado o canpo informado):
 
-  Parâmetro| Descrição
-  ----     |---------
-  value    | Deve conter um valor decimal que representa o valor da divida.
-  description| uma descrição da divida
+  Parâmetro| type |Descrição
+  ----     |---|------
+  value    |  number |Deve conter um valor decimal que representa o valor da divida.
+  description| string |uma descrição da dívida
 
 - DELETE  /debts 
 
@@ -155,9 +179,9 @@ A aplicação possue rotas para cadastrar, atualiza, listar e deletar dividas e 
   
   Recebe no parametro da requisição os seguintes parametro obrigatórios:
 
-  Parâmetro| Descrição
-  ----     |---------
-  id    | Id da divida que deseja deletar.
+  Parâmetro| type |Descrição
+  ----     |--| -------
+  id    | string |Id da dívida que deseja deletar.
  
 ---
 <h4 align="center">
