@@ -1,7 +1,7 @@
 import IDebtsRepository from '../../repositories/IDebtsRepository';
 import FakeDebtsRepository from '../../repositories/fake/fakeDebtsRepository';
 import DeleteDebtService from '../../services/DeleteDebtService';
-import AppError from '../../../../error/AppError';
+import AppError from '../../../../shared/error/AppError';
 
 let debtsRepository: IDebtsRepository;
 let deleteDebtService: DeleteDebtService;

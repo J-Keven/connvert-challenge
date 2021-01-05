@@ -1,5 +1,5 @@
 import IJsonPlaceholder from '../../../users/infra/services/model/IJsonPlaceholder';
-import AppError from '../../../../error/AppError';
+import AppError from '../../../../shared/error/AppError';
 import IDebtsRepository from '../../repositories/IDebtsRepository';
 import FakeDebtsRepository from '../../repositories/fake/fakeDebtsRepository';
 import JsonPlaceholder from '../../../users/infra/services/JsonPlaceholder';

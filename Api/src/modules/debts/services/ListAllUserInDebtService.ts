@@ -9,6 +9,7 @@ type IReaponse = Array<{
   count_debit: number;
   debt_total: number;
 }>;
+
 @injectable()
 class ListAllUserInDebtService {
   private debtsRepository: IDebtsRepository;

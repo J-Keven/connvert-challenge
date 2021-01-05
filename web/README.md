@@ -1,6 +1,6 @@
 <h3 align="center">
   <span>
-  <img alt="challenge-logo.png" src="assets/challenge-logo.png"  width='300px'/>
+  <img alt="challenge-logo.png" src="../assets/challenge-logo.png"  width='300px'/>
   </span>
 </h3>
 

@@ -1,4 +1,4 @@
-import AppError from '../../../../error/AppError';
+import AppError from '../../../../shared/error/AppError';
 import IDebtsRepository from '../../repositories/IDebtsRepository';
 import FakeDebtsRepository from '../../repositories/fake/fakeDebtsRepository';
 import UpdateDebtService from '../../services/UpdateDebtService';

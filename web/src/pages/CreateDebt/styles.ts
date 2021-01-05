@@ -77,9 +77,6 @@ export const Content = styled.div`
       button {
         display: flex;
         align-items: center;
-        /* border-radius: 8px; */
-        /* height: 50px;
-        width: 250px; */
         border: 0;
         background-color: transparent;
         transition: background 0.2s;

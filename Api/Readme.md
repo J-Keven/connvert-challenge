@@ -1,6 +1,6 @@
 <h3 align="center">
   <span>
-  <img alt="challenge-logo.png" src="assets/challenge-logo.png"  width='300px'/>
+  <img alt="challenge-logo.png" src="c"  width='300px'/>
   </span>
 </h3>
 
@@ -131,7 +131,7 @@ A aplicação possue rotas para cadastrar, atualiza, listar e deletar dividas e 
   Cadastra uma nova divida para um usuário e devolve como resposta a divida cadastrada.
   
   Recebe no corpo da requisição os seguintes parametro obrigatórios:
-  
+
   Parâmetro| Descrição
   ----     |---------
   user_id  | Deve conter o id do usuário que cotraiu a divida.
